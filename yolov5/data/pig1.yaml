@@ -1,0 +1,11 @@
+# position of data sets
+train: ./data/images/train/
+val: ./data/images/test/
+test: ./data/images/test/
+
+# number of classes
+nc: 3
+
+# class names
+names: [ 'drink', 'stand', 'lie']
+

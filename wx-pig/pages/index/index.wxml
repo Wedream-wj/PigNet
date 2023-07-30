@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<view class="main-page">
+    <!-- <view wx:if="{{!token}}"> -->
+    <view wx:if="{{token}}">
+        <van-cell-group>
+            <van-field
+                value="{{ phoneNumber }}"
+                label="手机号"
+                bindinput="getPhoneNumber"
+                clearable
+                placeholder="请输入手机号"
+                border="{{ false }}"/>
+            <van-field
+                value="{{ msgCode }}"
+                center
+                bindinput="getCode"
+                clearable
+                label="短信验证码"
+                placeholder="请输入短信验证码"
+                border="{{ false }}"
+                use-button-slot>
+                <van-button 
+                    slot="button" 
+                    size="small" 
+                    custom-class="send-msg" 
+                    type="warning" 
+                    bindtap="sendSms"
+                    disabled="{{disabled}}">{{smsText}}</van-button>
+            </van-field>
+            <van-toast id="van-toast" />
+        </van-cell-group>
+        <van-button type="primary" class="container" custom-class="login" bindtap="login">登录</van-button>
+    </view>
+    <view wx:else>
+        <!-- <van-search
+            value="{{ value }}"
+            shape="round"
+            background="#4fc08d"
+            placeholder="请输入食物名称"
+            bindtap="onChange"/> -->
+        <!-- 食物类型 -->
+        <van-image round width="10rem" class="avatar" height="10rem" src="{{ userInfo.avatarUrl }}" />
+        <van-button type="primary" class="loginbtn" custom-class="login" bindtap="getAgree">授权登录</van-button>
+        <van-toast id="van-toast" />
+        <van-grid column-num="3">
+            <van-grid-item 
+                wx:key="id"
+                use-slot 
+                wx:for="{{ foodList }}"
+                bind:click="toFood"
+                data-id="{{ item.id }}">
+                <iconfont name="{{ item.icon }}"/>
+                <span class="title">{{ item.title }}</span>
+            </van-grid-item>
+        </van-grid>
+    </view>
+</view>

@@ -17,7 +17,7 @@ Research on Behavior Recognition of Group-housed Pigs by Weijun Yuan.
 
 ## 数据集的准备工作
 
-关于群养猪的行为相关的数据集十分难获取，尤其是饮水行为的数据集。进行数据集的准备工作时，首先通过在生猪养殖场抓拍特定行为的图片和编写脚本爬取网络图片来采集数据集，然后使用labelImg软件进行数据集的标注，并将群养猪的行为定义为drink（饮水）、stand（站立）和lie（躺卧），标注完成后编写代码将标注数据转化为txt格式，原始图片和txt格式的标注文件共同构成群养猪行为识别数据集。
+关于群养猪的行为相关的数据集十分难获取，尤其是饮水行为的数据集。进行数据集的准备工作时，首先通过在生猪养殖场**抓拍**特定行为的图片和编写脚本**爬取**网络图片来采集数据集，然后使用labelImg软件进行数据集的标注，并将群养猪的行为定义为drink（饮水）、stand（站立）和lie（躺卧），标注完成后编写代码将标注数据转化为txt格式，原始图片和txt格式的标注文件共同构成群养猪行为识别数据集。
 
 ## YOLOv5模型的搭建
 
@@ -29,7 +29,7 @@ Research on Behavior Recognition of Group-housed Pigs by Weijun Yuan.
 
 在模型结构的调优阶段，在深度学习平台中开始对模型进行训练，直到模型收敛，然后对模型进行测试，比较并调整模型结构，周而复始，直到得到适用于群养环境下密集拥挤的生猪检测场景的模型。
 
-在YOLOv5s基础上，提出两种改进群养猪行为识别方法。第一点改进为：将**坐标注意力模块**（Coordinate Attention，CA）融合在YOLOv5s的骨干网络之后，记为YOLOv5s_CA。CA能够突出特征图的重要行为特征，抑制一般特征，对比于基于YOLOv5s群养猪行为识别算法，该模型的召回率、F1得分和mAP@0.5均有提升，分别为90.6%，0.897和93.0%。第二点改进为：在YOLOv5s_CA的基础上，用**DIoU-NMS**后处理算法替换NMS，记为改进YOLOv5s_CA。该改进方法在行为识别预测阶段，能够有效保留图像中密集遮挡的目标生猪检测框，降低生猪的漏检率。下图为改进YOLOv5s_CA的网络结构：
+在YOLOv5s基础上，提出两种改进群养猪行为识别方法。**第一点改进**为：将**坐标注意力模块**（Coordinate Attention，CA）融合在YOLOv5s的骨干网络之后，记为YOLOv5s_CA。CA能够突出特征图的重要行为特征，抑制一般特征，对比于基于YOLOv5s群养猪行为识别算法，该模型的召回率、F1得分和mAP@0.5均有提升，分别为90.6%，0.897和93.0%。**第二点改进**为：在YOLOv5s_CA的基础上，用**DIoU-NMS**后处理算法替换NMS，记为改进YOLOv5s_CA。该改进方法在行为识别预测阶段，能够有效保留图像中密集遮挡的目标生猪检测框，降低生猪的漏检率。下图为改进YOLOv5s_CA的网络结构：
 
 <img src="assets/readme02.png#pic_center" width="80%" alt="" align="center" />
 
@@ -69,6 +69,13 @@ pred = self.onnx_session.run(None, input_feed)[0]  # <class 'numpy.ndarray'>(1, 
 
 注意：使用ONNX进行推理的代码为`yolov5_deploy/onnx_inference3.py`。
 
+### 部署平台
+
+- 腾讯云
+- Ubuntu-20.04
+- CPU-2核
+- 内存-2GB
+
 ### 使用Flask部署后端服务
 
 使用轻量级的**Flask**框架编写调用YOLOv5s模型进行推理的接口，各个接口的功能如下：
@@ -98,7 +105,7 @@ pred = self.onnx_session.run(None, input_feed)[0]  # <class 'numpy.ndarray'>(1, 
 
 <img src="assets/readme04-1.png#pic_center" width="90%" alt="" align="center" />
 
-注意：使用Vue部署网站平台的工作目录为`deepvue`。
+注意：使用Vue部署网站平台的工作目录为`deepvue`。Vue项目的打包部署已上传至谷歌云端硬盘[https://drive.google.com/file/d/17CWt7FCrEEd5Sz6-ndRPeLlh911-gtUr/view?usp=sharing](https://drive.google.com/file/d/17CWt7FCrEEd5Sz6-ndRPeLlh911-gtUr/view?usp=sharing)。
 
 ### 微信小程序
 
@@ -126,5 +133,4 @@ pred = self.onnx_session.run(None, input_feed)[0]  # <class 'numpy.ndarray'>(1, 
 
 <img src="assets/readme06-1.png#pic_center" width="90%" alt="" align="center" />
 
-注意：使用PyQt开发应用程序的工作目录为`yolov5_pyqt`。
-
+注意：使用PyQt开发应用程序的工作目录为`yolov5_pyqt`。PyQt应用程序的部署exe文件已上传至谷歌云端硬盘[https://drive.google.com/file/d/1CWKLvpxws9CyfnINqJQ0MoXvYblgpaRo/view?usp=sharing](https://drive.google.com/file/d/1CWKLvpxws9CyfnINqJQ0MoXvYblgpaRo/view?usp=sharing)。

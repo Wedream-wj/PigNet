@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>751</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="imgBalanceWin">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>20</y>
+      <width>631</width>
+      <height>621</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>60</y>
+      <width>232</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0,0,0,0,0,0,0,0,0">
+     <property name="leftMargin">
+      <number>10</number>
+     </property>
+     <item row="12" column="0">
+      <widget class="QRadioButton" name="filter_mode">
+       <property name="text">
+        <string>波形滤镜 ModeFilter</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QRadioButton" name="filter_median">
+       <property name="text">
+        <string>中值滤波滤镜 MedianFilter</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QRadioButton" name="filter_max">
+       <property name="text">
+        <string>最大值滤波  MaxFilter</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QRadioButton" name="filter_contour">
+       <property name="text">
+        <string>轮廓滤镜 CONTOUR</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QRadioButton" name="filter_detail">
+       <property name="text">
+        <string>细节滤镜 DETAIL</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QRadioButton" name="filter_edge_enhance">
+       <property name="text">
+        <string>边界增强滤镜 EDGE_ENHANCE</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="0">
+      <widget class="QRadioButton" name="filter_smooth">
+       <property name="text">
+        <string>平滑滤镜 SMOOTH</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QRadioButton" name="filter_min">
+       <property name="text">
+        <string>最小值滤波  MinFilter</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QRadioButton" name="filter_rank">
+       <property name="text">
+        <string>等级滤波 RankFilter</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="QRadioButton" name="filter_emboss">
+       <property name="text">
+        <string>浮雕滤镜 EMBOSS</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QRadioButton" name="filter_blue">
+       <property name="text">
+        <string>模糊滤镜  BLUR</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0">
+      <widget class="QRadioButton" name="filter_sharpen">
+       <property name="text">
+        <string>锐化滤镜 SHARPEN</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QRadioButton" name="filter_reset">
+       <property name="text">
+        <string>复原</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>30</y>
+      <width>211</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>滤镜</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSlider" name="saturatSlider">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>630</y>
+      <width>160</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="sliderPosition">
+     <number>50</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="brightLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>580</y>
+      <width>50</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(35, 35, 35);</string>
+    </property>
+    <property name="text">
+     <string>亮度</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="saturatLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>630</y>
+      <width>50</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(35, 35, 35);</string>
+    </property>
+    <property name="text">
+     <string>饱和度</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="contrastLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>680</y>
+      <width>50</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(35, 35, 35);</string>
+    </property>
+    <property name="text">
+     <string>对比度</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="brightSlider">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>580</y>
+      <width>160</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="sliderPosition">
+     <number>50</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="contrastSlider">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>680</y>
+      <width>160</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="sliderPosition">
+     <number>50</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="GaussBlurLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>530</y>
+      <width>61</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(35, 35, 35);</string>
+    </property>
+    <property name="text">
+     <string>高斯模糊</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="GaussBlurSlider">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>530</y>
+      <width>160</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="maximum">
+     <number>10</number>
+    </property>
+    <property name="sliderPosition">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="deColor_Radio">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>470</y>
+      <width>71</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>去色</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="invertColor_Radio">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>470</y>
+      <width>71</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>反色</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="origin_Btn">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>680</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>原图</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="draw_Btn">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>680</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>效果图</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="reset_Btn">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>680</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>复原</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ok_Btn">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>680</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>确定</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1001</width>
+      <height>751</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 250, 212);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="GaussBlur_label">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>530</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="saturat_label">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>630</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>50</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="bright_label">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>580</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>50</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="contrast_label">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>680</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>50</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <zorder>label_2</zorder>
+   <zorder>imgBalanceWin</zorder>
+   <zorder>gridLayoutWidget</zorder>
+   <zorder>filter_blue</zorder>
+   <zorder>filter_contour</zorder>
+   <zorder>label</zorder>
+   <zorder>saturatSlider</zorder>
+   <zorder>brightLabel</zorder>
+   <zorder>saturatLabel</zorder>
+   <zorder>contrastLabel</zorder>
+   <zorder>brightSlider</zorder>
+   <zorder>contrastSlider</zorder>
+   <zorder>GaussBlurLabel</zorder>
+   <zorder>GaussBlurSlider</zorder>
+   <zorder>deColor_Radio</zorder>
+   <zorder>invertColor_Radio</zorder>
+   <zorder>origin_Btn</zorder>
+   <zorder>draw_Btn</zorder>
+   <zorder>reset_Btn</zorder>
+   <zorder>ok_Btn</zorder>
+   <zorder>GaussBlur_label</zorder>
+   <zorder>saturat_label</zorder>
+   <zorder>bright_label</zorder>
+   <zorder>contrast_label</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

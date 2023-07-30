@@ -1,0 +1,13 @@
+/*配置全局的CSS样式*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*markdown中代码块的自动换行*/
+.github-markdown-body pre code, .github-markdown-body pre tt {
+     white-space: normal;
+     word-break: break-all;
+}

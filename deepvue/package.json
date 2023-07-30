@@ -1,0 +1,40 @@
+{
+  "name": "springboot-vue-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@gabojkz/vue_moveable_v3": "^0.0.3-semantically-released",
+    "@kangc/v-md-editor": "^2.3.7",
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "duo-image-viewer": "^1.0.46",
+    "echarts": "^5.1.2",
+    "echarts-stat": "^1.2.0",
+    "echarts-wordcloud": "^2.0.0",
+    "element-plus": "^1.0.2-beta.55",
+    "eslint-plugin-vue": "^7.14.0",
+    "jquery": "^3.6.0",
+    "v-viewer": "^1.6.4",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-0",
+    "vue2-viewer": "^1.0.3",
+    "vuex": "^4.0.0-0",
+    "wangeditor": "^4.7.5"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

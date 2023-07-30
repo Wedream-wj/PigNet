@@ -1,0 +1,9 @@
+{
+	"usingComponents": {
+		"van-grid": "@vant/weapp/grid/index",
+		"van-grid-item": "@vant/weapp/grid-item/index",
+		"van-tag": "@vant/weapp/tag/index",
+		"iconfont": "/iconfont/iconfont"
+	},
+	"navigationBarTitleText": "授权登录"
+}

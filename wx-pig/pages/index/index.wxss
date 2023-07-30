@@ -1,0 +1,12 @@
+.send-msg {
+    width: 100px !important;
+}
+
+.login {
+    width: 80%;
+}
+
+.title {
+    margin-top: 5px;
+	font-size: 12px;
+}

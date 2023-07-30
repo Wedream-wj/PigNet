@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1022</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="toolTip">
+   <string/>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 75 10pt &quot;宋体&quot;;
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="timeLabel">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>745</y>
+      <width>170</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>10</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(241, 241, 241, 180);
+background-color: rgb(0, 0, 0, 125);</string>
+    </property>
+    <property name="text">
+     <string>0000-00-00 00:00:00</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="setBtn">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>20</y>
+      <width>36</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>设置</string>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;
+border: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Icons/setting.png</normaloff>Icons/setting.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>35</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="autoRepeat">
+     <bool>true</bool>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="helpBtn">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>20</y>
+      <width>36</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>帮助</string>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;
+border: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Icons/help.png</normaloff>Icons/help.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>35</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="autoRepeat">
+     <bool>true</bool>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="musicBtn">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>20</y>
+      <width>36</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>音乐</string>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;
+border: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>Icons/music.png</normaloff>Icons/music.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>35</width>
+      <height>35</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="autoRepeat">
+     <bool>true</bool>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="balanceBtn">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>670</y>
+      <width>100</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	height:40px;
+	border:1px solid #4e6096;
+	background-color: rgb(155, 255, 189);
+	color:#2a2a2a;
+	background-color:#61ddff;
+	font-family:&quot;微软雅黑&quot;;
+	font-size:17px;
+	font-weight:bold;
+	-moz-border-radius:10px;
+}
+QPushButton:hover{
+	background-color:#2e9eff;
+	border:1px solid #1569bd;
+	color:#ecff3d;
+}</string>
+    </property>
+    <property name="text">
+     <string>调整图片</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="selectBtn">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>670</y>
+      <width>100</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	height:40px;
+	border:1px solid #4e6096;
+	background-color: rgb(155, 255, 189);
+	color:#2a2a2a;
+	background-color:#61ddff;
+	font-family:&quot;微软雅黑&quot;;
+	font-size:17px;
+	font-weight:bold;
+	-moz-border-radius:10px;
+}
+QPushButton:hover{
+	background-color:#2e9eff;
+	border:1px solid #1569bd;
+	color:#ecff3d;
+}</string>
+    </property>
+    <property name="text">
+     <string>选择图片</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="saveBtn">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>670</y>
+      <width>100</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	height:40px;
+	border:1px solid #4e6096;
+	background-color: rgb(155, 255, 189);
+	color:#2a2a2a;
+	background-color:#61ddff;
+	font-family:&quot;微软雅黑&quot;;
+	font-size:17px;
+	font-weight:bold;
+	-moz-border-radius:10px;
+}
+QPushButton:hover{
+	background-color:#2e9eff;
+	border:1px solid #1569bd;
+	color:#ecff3d;
+}</string>
+    </property>
+    <property name="text">
+     <string>保存</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="effectBtn">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>670</y>
+      <width>100</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	height:40px;
+	border:1px solid #4e6096;
+	background-color: rgb(155, 255, 189);
+	color:#2a2a2a;
+	background-color:#61ddff;
+	font-family:&quot;微软雅黑&quot;;
+	font-size:17px;
+	font-weight:bold;
+	-moz-border-radius:10px;
+}
+QPushButton:hover{
+	background-color:#2e9eff;
+	border:1px solid #1569bd;
+	color:#ecff3d;
+}</string>
+    </property>
+    <property name="text">
+     <string>效果图</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="originBtn">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>670</y>
+      <width>100</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	height:40px;
+	border:1px solid #4e6096;
+	background-color: rgb(155, 255, 189);
+	color:#2a2a2a;
+	background-color:#61ddff;
+	font-family:&quot;微软雅黑&quot;;
+	font-size:17px;
+	font-weight:bold;
+	-moz-border-radius:10px;
+}
+QPushButton:hover{
+	background-color:#2e9eff;
+	border:1px solid #1569bd;
+	color:#ecff3d;
+}</string>
+    </property>
+    <property name="text">
+     <string>原图</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="detectBtn">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>670</y>
+      <width>100</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	height:40px;
+	border:1px solid #4e6096;
+	background-color: rgb(155, 255, 189);
+	color:#2a2a2a;
+	background-color:#61ddff;
+	font-family:&quot;微软雅黑&quot;;
+	font-size:17px;
+	font-weight:bold;
+	-moz-border-radius:10px;
+}
+QPushButton:hover{
+	background-color:#2e9eff;
+	border:1px solid #1569bd;
+	color:#ecff3d;
+}</string>
+    </property>
+    <property name="text">
+     <string>检测</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="brightLabel">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>600</y>
+      <width>50</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(244, 244, 244);</string>
+    </property>
+    <property name="text">
+     <string>亮度</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="saturatLabel">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>650</y>
+      <width>50</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(244, 244, 244);</string>
+    </property>
+    <property name="text">
+     <string>饱和度</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="contrastLabel">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>700</y>
+      <width>50</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(244, 244, 244);</string>
+    </property>
+    <property name="text">
+     <string>对比度</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="brightSlider">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>600</y>
+      <width>160</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::StrongFocus</enum>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="sliderPosition">
+     <number>50</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="saturatSlider">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>650</y>
+      <width>160</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="sliderPosition">
+     <number>50</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="contrastSlider">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>700</y>
+      <width>160</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="sliderPosition">
+     <number>50</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="backgroundImg">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1021</width>
+      <height>781</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgba(255, 255, 255, 240);
+font: 12pt &quot;微软雅黑&quot;;
+
+
+
+
+
+
+
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Images/2.jpeg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="indent">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgDisplayLaebl">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>70</y>
+      <width>691</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	color: rgb(240, 240, 240,0);
+	font: 18pt &quot;Times New Roman&quot;;
+}
+QLabel:hover{
+	color: rgb(231, 231, 231);
+	background-color: rgb(0, 0, 0, 75);
+}</string>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+    <property name="text">
+     <string>please choose a file</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imgInfoLabel">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>90</y>
+      <width>211</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+	font: 10pt &quot;微软雅黑&quot;;
+	color: rgba(255, 255, 255, 0);
+}
+QLabel:hover{
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0, 75);
+	color: rgb(255, 255, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>图片信息</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="poetryText">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>571</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgba(255, 255, 255, 240);
+font: 12pt &quot;微软雅黑&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string>我是一只可怜的流浪猫，请领养我回家。</string>
+    </property>
+   </widget>
+   <zorder>backgroundImg</zorder>
+   <zorder>timeLabel</zorder>
+   <zorder>setBtn</zorder>
+   <zorder>helpBtn</zorder>
+   <zorder>musicBtn</zorder>
+   <zorder>balanceBtn</zorder>
+   <zorder>selectBtn</zorder>
+   <zorder>saveBtn</zorder>
+   <zorder>effectBtn</zorder>
+   <zorder>originBtn</zorder>
+   <zorder>detectBtn</zorder>
+   <zorder>brightLabel</zorder>
+   <zorder>saturatLabel</zorder>
+   <zorder>contrastLabel</zorder>
+   <zorder>brightSlider</zorder>
+   <zorder>saturatSlider</zorder>
+   <zorder>contrastSlider</zorder>
+   <zorder>imgDisplayLaebl</zorder>
+   <zorder>imgInfoLabel</zorder>
+   <zorder>poetryText</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1022</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="FileMenu">
+    <property name="geometry">
+     <rect>
+      <x>294</x>
+      <y>196</y>
+      <width>195</width>
+      <height>126</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>文件(F)</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSaveImg"/>
+   </widget>
+   <widget class="QMenu" name="HelpMenu">
+    <property name="geometry">
+     <rect>
+      <x>371</x>
+      <y>196</y>
+      <width>147</width>
+      <height>78</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>帮助(H）</string>
+    </property>
+    <addaction name="actionHelp"/>
+   </widget>
+   <addaction name="FileMenu"/>
+   <addaction name="HelpMenu"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="text">
+    <string>打开(O)  ctrl+O</string>
+   </property>
+   <property name="autoRepeat">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>保存(S)  ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSaveImg">
+   <property name="text">
+    <string>图片另存为(A)</string>
+   </property>
+   <property name="iconText">
+    <string>图片另存为(A)</string>
+   </property>
+   <property name="toolTip">
+    <string>图片另存为(A)</string>
+   </property>
+  </action>
+  <action name="actionA">
+   <property name="text">
+    <string>音乐</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>关于软件</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="qrc/help.qrc"/>
+ </resources>
+ <connections/>
+</ui>

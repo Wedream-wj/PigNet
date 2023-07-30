@@ -1,0 +1,34 @@
+<!-- <van-row gutter="20">
+    <van-col span="8" custom-class="avatar-class">
+        <van-image round width="6rem" height="6rem" src="{{ userInfo.avatarUrl }}" />
+    </van-col>
+    <van-col span="10">
+        {{ userInfo.nickName }}
+        <van-icon name="success" />
+        <text>\n\n\n{{ userInfo.address }}</text>
+    </van-col>
+</van-row> -->
+<scroll-view scroll-y class="scrollPage">
+<view class="UCenter-bg">
+    <view class="userinfo">
+<!--    <button class="cu-btn bg-xsblue margin-tb-lg lg" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="getUserInfo"> 授权获取用户更多信息</button>-->
+      <button class="cu-btn bg-xsblue margin-tb-lg lg" wx:if="{{!hasUserInfo && canIUse}}" bindtap="getUserProfile"> 授权获取用户更多信息</button>
+      <block wx:else>
+      <image bindtap="bindViewTap" class="user-img" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <view class="text-xl" style="text-align:center;">{{userInfo.nickName}}</view>
+    </block>
+    </view>
+    <image src="https://img-blog.csdnimg.cn/072af5b02e9e4569929e64f2ab1e4ae3.gif" mode="scaleToFill" class="gif-wave"></image>
+  </view>
+<text>\n</text>
+
+<!-- <van-cell is-link title="我的订单" link-type="navigateTo" url="" />
+<van-cell is-link title="今日运动" link-type="navigateTo" url="" />
+<van-cell is-link title="今日推荐" link-type="navigateTo" url="" /> -->
+
+<van-dialog id="van-dialog" />
+<button class="logout-btn" bindtap="CopyLink" data-link="https://blog.csdn.net/weixin_43800577?spm=1010.2135.3001.5343">联系作者</button>
+<button class="logout-btn" bindtap="logout">退出登录</button>
+
+
+</scroll-view>

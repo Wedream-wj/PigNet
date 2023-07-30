@@ -1,0 +1,10 @@
+#数据集位置
+train: ./data/images/train/  
+val: ./data/images/val/  
+test: ./data/images/test/  
+
+# 类别数
+nc: 1
+
+# 类别名
+names: [ 'pig' ]
