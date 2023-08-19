@@ -134,3 +134,6 @@ pred = self.onnx_session.run(None, input_feed)[0]  # <class 'numpy.ndarray'>(1, 
 <img src="assets/readme06-1.png#pic_center" width="90%" alt="" align="center" />
 
 注意：使用PyQt开发应用程序的工作目录为`yolov5_pyqt`。PyQt应用程序的部署exe文件已上传至谷歌云端硬盘[https://drive.google.com/file/d/1CWKLvpxws9CyfnINqJQ0MoXvYblgpaRo/view?usp=sharing](https://drive.google.com/file/d/1CWKLvpxws9CyfnINqJQ0MoXvYblgpaRo/view?usp=sharing)。
+
+## 更多信息
+更多实验信息可查看**“基于改进YOLOv5的群养猪行为识别算法研究及部署.pdf”**。
